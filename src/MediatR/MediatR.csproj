@@ -20,6 +20,8 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    <Version>11.1.1-JustinWritesCodeMods</Version>
+    <MinVerVersionOverride>11.1.1-JustinWritesCodeMods</MinVerVersionOverride>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR.Contracts" Version="1.0.1" />
+    <!-- <PackageReference Include="MediatR.Contracts" Version="1.0.1" /> -->
+    <ProjectReference Include="../MediatR.Contracts/MediatR.Contracts.csproj" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="MinVer" Version="4.1.0" PrivateAssets="All" />
